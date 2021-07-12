@@ -1,0 +1,12 @@
+<h1>Display Objects</h1>
+
+{% for projectObject in projects %}
+
+<a href="{% url 'detail' projectObject.id %}">
+    <h2>{{projectObject.title}}</h2>
+</a>
+
+<img src="{{projectObject.image.url}}" width="200" height="160" />
+
+
+{% endfor %}
